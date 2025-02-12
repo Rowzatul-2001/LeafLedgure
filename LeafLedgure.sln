@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35617.110 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeafLedgure", "LeafLedgure\LeafLedgure.csproj", "{96EFEAD9-38AE-4136-8430-F7C1CEAD5FDB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{96EFEAD9-38AE-4136-8430-F7C1CEAD5FDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96EFEAD9-38AE-4136-8430-F7C1CEAD5FDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96EFEAD9-38AE-4136-8430-F7C1CEAD5FDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96EFEAD9-38AE-4136-8430-F7C1CEAD5FDB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {94715F19-7CC1-4CD5-9601-FF4BBD33559E}
+	EndGlobalSection
+EndGlobal
