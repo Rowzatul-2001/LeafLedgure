@@ -10,6 +10,9 @@ namespace LeafLedgure.Models
         public int Id { get; set; }
         [Required, MaxLength(40)]
         public string? BookName { get; set; }
+        [Required, MaxLength(40)]
+        public string? AuthorName { get; set; }
+
         public  double Price { get; set; }
         public string? BookImg { get; set; }
         [Required]
