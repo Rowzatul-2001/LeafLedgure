@@ -24,6 +24,7 @@ builder.Services.AddIdentity<ApplicationUser,IdentityRole>()
 builder.Services.AddScoped<IFileService, FileService>();
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IGenreService, GenreServices>();
+builder.Services.AddScoped<IAuthorService, AuthorService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

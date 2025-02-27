@@ -25,6 +25,18 @@
                             <a class="nav-link " asp-area="" asp-controller="Product" asp-action="GetAll">Products</a>
                         </li>
                     }
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link " asp-area="" asp-controller="Genre" asp-action="Add">Genre</a>
+                        </li>
+                    }
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link " asp-area="" asp-controller="Author" asp-action="Add">Author</a>
+                        </li>
+                    }
                     @if (User.Identity.IsAuthenticated)
                     {
                         <li class="nav-item">
