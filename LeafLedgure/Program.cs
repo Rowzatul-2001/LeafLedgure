@@ -1,6 +1,8 @@
 
 using AspnetIdentityRoleBasedTutorial.Data;
 using LeafLedgure.Data;
+using LeafLedgure.Repositories.Abstract;
+using LeafLedgure.Repositories.Implementation;
 using LeafLedgure.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -21,7 +23,7 @@ builder.Services.AddIdentity<ApplicationUser,IdentityRole>()
              .AddDefaultTokenProviders();
 builder.Services.AddScoped<IFileService, FileService>();
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddScoped<IGenreService, GenreServices>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
