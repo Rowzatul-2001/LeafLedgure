@@ -19,34 +19,19 @@ namespace LeafLedgure.Controllers
         [HttpPost]
         public IActionResult Add(Genre model)
         {
-            Console.WriteLine($"📌 Received Genre: {model.GenreName}");
-
-            if (!ModelState.IsValid)
+            if(!ModelState.IsValid)
             {
-                Console.WriteLine("❌ ModelState is INVALID! Errors:");
-                foreach (var error in ModelState)
-                {
-                    foreach (var subError in error.Value.Errors)
-                    {
-                        Console.WriteLine($"⛔ Field: {error.Key} | Error: {subError.ErrorMessage}");
-                    }
-                }
-
-                TempData["msg"] = "Validation failed. Please check your input.";
                 return View(model);
             }
-
             var result = service.Add(model);
-            if (result)
+            if(result)
             {
-                TempData["msg"] = "Added Successfully!";
+                TempData["msg"] = "Added Successfully";
                 return RedirectToAction(nameof(Add));
             }
-
             TempData["msg"] = "Error occurred";
             return View(model);
         }
-
 
 
 
