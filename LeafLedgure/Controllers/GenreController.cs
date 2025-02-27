@@ -19,10 +19,7 @@ namespace LeafLedgure.Controllers
         [HttpPost]
         public IActionResult Add(Genre model)
         {
-            if(!ModelState.IsValid)
-            {
-                return View(model);
-            }
+         
             var result = service.Add(model);
             if(result)
             {
