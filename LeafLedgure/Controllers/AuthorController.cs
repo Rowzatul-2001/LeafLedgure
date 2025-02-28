@@ -1,9 +1,11 @@
 ﻿using LeafLedgure.Models.Domain;
 using LeafLedgure.Repositories.Abstract;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LeafLedgure.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class AuthorController : Controller
     {
         private readonly IAuthorService service;

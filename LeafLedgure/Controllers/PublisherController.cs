@@ -6,24 +6,24 @@ using Microsoft.AspNetCore.Mvc;
 namespace LeafLedgure.Controllers
 {
     [Authorize(Roles = "Admin")]
-    public class GenreController : Controller
+    public class PublisherController : Controller
     {
-        private readonly IGenreService service;
-        public GenreController(IGenreService service)
+        private readonly IPublisherService service;
+        public PublisherController(IPublisherService service)
         {
             this.service = service;
         }
         public IActionResult Add()
-        { 
+        {
             return View();
         }
 
         [HttpPost]
-        public IActionResult Add(Genre model)
+        public IActionResult Add(Publisher model)
         {
-         
+
             var result = service.Add(model);
-            if(result)
+            if (result)
             {
                 TempData["msg"] = "Added Successfully";
                 return RedirectToAction(nameof(Add));
@@ -41,15 +41,11 @@ namespace LeafLedgure.Controllers
         }
 
         [HttpPost]
-        public IActionResult Update(Genre model)
-        {
-            //if (!ModelState.IsValid)
-            //{
-            //    return View(model);
-            //}
+        public IActionResult Update(Publisher model)
+        { 
             var result = service.Update(model);
             if (result)
-            { 
+            {
                 return RedirectToAction("GetAll");
             }
             TempData["msg"] = "Error occurred";
