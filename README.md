@@ -21,7 +21,7 @@ The Bookshop Management System is a simple project that helps manage books, cust
 
    Backend: ASP.NET Core MVC
 
-   Frontend: Bootstrap, HTML, CSS, JavaScript
+   Frontend: Bootstrap, HTML, CSS
 
    Database: SQL Server
 
